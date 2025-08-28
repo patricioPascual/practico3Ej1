@@ -72,6 +72,7 @@ public class frmLogin extends javax.swing.JFrame {
         BtnIngreso.setBackground(new java.awt.Color(255, 255, 255));
         BtnIngreso.setForeground(new java.awt.Color(0, 0, 0));
         BtnIngreso.setText("Ingresar");
+        BtnIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnIngreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnIngresoActionPerformed(evt);
@@ -81,6 +82,7 @@ public class frmLogin extends javax.swing.JFrame {
         Btnsalir.setBackground(new java.awt.Color(255, 255, 255));
         Btnsalir.setForeground(new java.awt.Color(0, 0, 0));
         Btnsalir.setText("Salir");
+        Btnsalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btnsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnsalirActionPerformed(evt);
@@ -90,6 +92,7 @@ public class frmLogin extends javax.swing.JFrame {
         BtnOcultar.setBackground(new java.awt.Color(255, 255, 255));
         BtnOcultar.setForeground(new java.awt.Color(0, 0, 0));
         BtnOcultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/Ocultar.png"))); // NOI18N
+        BtnOcultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnOcultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnOcultarActionPerformed(evt);
@@ -99,6 +102,7 @@ public class frmLogin extends javax.swing.JFrame {
         BtnVer.setBackground(new java.awt.Color(255, 255, 255));
         BtnVer.setForeground(new java.awt.Color(0, 0, 0));
         BtnVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/Ver.png"))); // NOI18N
+        BtnVer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnVer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnVerActionPerformed(evt);
