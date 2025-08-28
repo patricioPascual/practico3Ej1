@@ -36,13 +36,16 @@ public class frmLogin extends javax.swing.JFrame {
         textoPass = new javax.swing.JPasswordField();
         BtnIngreso = new javax.swing.JButton();
         Btnsalir = new javax.swing.JButton();
+        BtnOcultar = new javax.swing.JButton();
+        BtnVer = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         DekPanel.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         DekPanel.setName("Inicio de Sesion"); // NOI18N
 
-        pnlinicio.setBackground(new java.awt.Color(204, 204, 204));
+        pnlinicio.setBackground(new java.awt.Color(255, 255, 255));
         pnlinicio.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inicio de sesion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         pnlinicio.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -51,7 +54,7 @@ public class frmLogin extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("CONTRASEÑA :");
 
-        textoUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        textoUsuario.setBackground(new java.awt.Color(205, 205, 205));
         textoUsuario.setForeground(new java.awt.Color(0, 0, 0));
         textoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,9 +67,9 @@ public class frmLogin extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("USUARIO :");
 
-        textoPass.setBackground(new java.awt.Color(255, 255, 255));
+        textoPass.setBackground(new java.awt.Color(205, 205, 205));
 
-        BtnIngreso.setBackground(new java.awt.Color(204, 204, 204));
+        BtnIngreso.setBackground(new java.awt.Color(255, 255, 255));
         BtnIngreso.setForeground(new java.awt.Color(0, 0, 0));
         BtnIngreso.setText("Ingresar");
         BtnIngreso.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +78,7 @@ public class frmLogin extends javax.swing.JFrame {
             }
         });
 
-        Btnsalir.setBackground(new java.awt.Color(204, 204, 204));
+        Btnsalir.setBackground(new java.awt.Color(255, 255, 255));
         Btnsalir.setForeground(new java.awt.Color(0, 0, 0));
         Btnsalir.setText("Salir");
         Btnsalir.addActionListener(new java.awt.event.ActionListener() {
@@ -84,50 +87,82 @@ public class frmLogin extends javax.swing.JFrame {
             }
         });
 
+        BtnOcultar.setBackground(new java.awt.Color(255, 255, 255));
+        BtnOcultar.setForeground(new java.awt.Color(0, 0, 0));
+        BtnOcultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/Ocultar.png"))); // NOI18N
+        BtnOcultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnOcultarActionPerformed(evt);
+            }
+        });
+
+        BtnVer.setBackground(new java.awt.Color(255, 255, 255));
+        BtnVer.setForeground(new java.awt.Color(0, 0, 0));
+        BtnVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/Ver.png"))); // NOI18N
+        BtnVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnVerActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resource/pinguinogordofachero (1).png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+
         javax.swing.GroupLayout pnlinicioLayout = new javax.swing.GroupLayout(pnlinicio);
         pnlinicio.setLayout(pnlinicioLayout);
         pnlinicioLayout.setHorizontalGroup(
             pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlinicioLayout.createSequentialGroup()
-                .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(31, 31, 31)
+                .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(pnlinicioLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlinicioLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(textoUsuario)
-                            .addComponent(textoPass, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)))
+                            .addComponent(textoPass, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BtnVer)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BtnOcultar)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pnlinicioLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
                         .addComponent(BtnIngreso)
                         .addGap(18, 18, 18)
-                        .addComponent(Btnsalir)))
-                .addContainerGap(28, Short.MAX_VALUE))
-            .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlinicioLayout.createSequentialGroup()
-                    .addGap(27, 27, 27)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(203, Short.MAX_VALUE)))
+                        .addComponent(Btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(112, 112, 112))))
         );
         pnlinicioLayout.setVerticalGroup(
             pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlinicioLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(textoPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnIngreso)
-                    .addComponent(Btnsalir))
-                .addGap(28, 28, 28))
-            .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlinicioLayout.createSequentialGroup()
-                    .addGap(56, 56, 56)
-                    .addComponent(jLabel2)
-                    .addContainerGap(108, Short.MAX_VALUE)))
+                    .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BtnOcultar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(BtnVer, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(textoPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlinicioLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlinicioLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(BtnIngreso)
+                            .addComponent(Btnsalir))
+                        .addGap(39, 39, 39))))
         );
 
         DekPanel.setLayer(pnlinicio, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -136,17 +171,17 @@ public class frmLogin extends javax.swing.JFrame {
         DekPanel.setLayout(DekPanelLayout);
         DekPanelLayout.setHorizontalGroup(
             DekPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DekPanelLayout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+            .addGroup(DekPanelLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
                 .addComponent(pnlinicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         DekPanelLayout.setVerticalGroup(
             DekPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DekPanelLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(31, 31, 31)
                 .addComponent(pnlinicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -157,7 +192,7 @@ public class frmLogin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DekPanel)
+            .addComponent(DekPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -168,13 +203,24 @@ public class frmLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_textoUsuarioActionPerformed
 
     private void BtnIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresoActionPerformed
-       if (textoUsuario.getText().equalsIgnoreCase("alumno@ulp.edu.ar") && textoPass.getText().equalsIgnoreCase("12345678")  ){
-        JOptionPane.showMessageDialog(this,"Bienvenido");
+        if (textoUsuario.getText().equalsIgnoreCase("alumno@ulp.edu.ar") && textoPass.getText().equalsIgnoreCase("12345678")  ){
+        JOptionPane.showMessageDialog(this,"Bienvenido");} else {
+        JOptionPane.showMessageDialog(this,"No fue posible el ingreso, usuario y/o contraseña incorrecto");
+        }
     }//GEN-LAST:event_BtnIngresoActionPerformed
-    }
+    
+
     private void BtnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnsalirActionPerformed
-      System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_BtnsalirActionPerformed
+
+    private void BtnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVerActionPerformed
+        textoPass.setEchoChar((char) 0);
+    }//GEN-LAST:event_BtnVerActionPerformed
+
+    private void BtnOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnOcultarActionPerformed
+        textoPass.setEchoChar('*');
+    }//GEN-LAST:event_BtnOcultarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,10 +259,13 @@ public class frmLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnIngreso;
+    private javax.swing.JButton BtnOcultar;
+    private javax.swing.JButton BtnVer;
     private javax.swing.JButton Btnsalir;
     private javax.swing.JDesktopPane DekPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel pnlinicio;
     private javax.swing.JPasswordField textoPass;
     private javax.swing.JTextField textoUsuario;
